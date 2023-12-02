@@ -1,0 +1,58 @@
+export default {
+    name: 'product',
+    type: 'document',
+    title: 'Produkty wystawione na stronie', // Nazwać oficjalnie w późniejszym etapie
+
+    fields: [
+        {
+            name: 'name',
+            type: 'string',
+            title: 'Nazwa produktu', 
+        },
+        {
+            name: 'images',
+            type: 'array',
+            title: 'Zdjęcia', 
+            of: [{type: 'image'}],
+        },
+        {
+            name: 'catalog',
+            type: 'string',
+            title: 'Numer katalogowy produktu',
+            options: {
+                source: 'name',
+            }
+        },
+        { // Roboczo
+            name: 'descHeader',
+            type: 'string',
+            title: 'Nagłówek',
+        },
+        {
+            name: 'description',
+            type: 'text',
+            title: 'Opis produktu',
+        },
+        {
+            name: 'slug',
+            type: 'slug',
+            title: 'Slug',
+            options: {
+                source: 'name',
+            }
+        },
+        {
+            name: 'price',
+            title: 'Cena',
+            type: 'number',
+        },
+        {
+            name: 'category',
+            title: 'Kategoria',
+            type: 'reference',
+            to: [{
+                type: 'category',
+            }],
+        },
+    ],
+}
