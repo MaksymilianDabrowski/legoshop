@@ -3,5 +3,5 @@ export default function Home() {
     <main>
       Hello world
     </main>
-  )
+  );
 }
