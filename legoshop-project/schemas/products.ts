@@ -14,6 +14,9 @@ export default {
             type: 'array',
             title: 'Zdjęcia', 
             of: [{type: 'image'}],
+            options: {
+                hotspot: true,
+            },
         },
         {
             name: 'catalog',
@@ -21,6 +24,7 @@ export default {
             title: 'Numer katalogowy produktu',
             options: {
                 source: 'name',
+                maxLength: 7,
             }
         },
         { // Roboczo
@@ -39,6 +43,7 @@ export default {
             title: 'Slug',
             options: {
                 source: 'name',
+                maxLength: 50, // zobaczymy czy wystarczy
             }
         },
         {
@@ -53,6 +58,11 @@ export default {
             to: [{
                 type: 'category',
             }],
+        },
+        {
+            name: 'sale',
+            title: 'Przecena produktu',
+            type: 'string',
         },
     ],
 }
