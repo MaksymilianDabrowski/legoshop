@@ -39,7 +39,8 @@ const Navbar = () => {
       
       {/* Koszyk - poprawić formatowanie */}
       <div className='flex border-r'>
-          <Button variant="mine" className='flex flex-col gap-y-1.5 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-md'>
+          <Button variant="mine" className='flex flex-col gap-y-1.5 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-md ml-16'>
+             Koszyk
             <ToyBrick />
           </Button>
       </div>
