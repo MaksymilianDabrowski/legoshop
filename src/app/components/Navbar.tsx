@@ -11,14 +11,14 @@ const links = [
   {name: 'Zestawy', href: '/Sets'},
   {name: 'Figurki', href: '/Minifigures'},
   {name: 'Części', href: '/Parts'},
-  {name: 'Polecane', href: '/Popular'}, // dodać 4 kategorie
+  {name: 'Instrukcje', href: '/Instuctions'}, // dodać 4 kategorie
 
 ]
 
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <header className='mb-8 border-b'>
+    <header className='border-b'>
       <div className='flex items-center justify-center mx-auto max-w-3xl px-4'>
       <Link href="/">
         <h3 className='text-3xl font-semibold cursor-pointer duration-200'>

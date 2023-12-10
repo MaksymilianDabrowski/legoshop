@@ -1,3 +1,4 @@
+import bannerSchema from "./bannerSchema";
 import category from "./category";
 import heroImage from "./heroImage";
 import products from "./products";
@@ -5,5 +6,6 @@ import products from "./products";
 export const schemaTypes = [
     products,
     category,
-    heroImage
+    heroImage,
+    bannerSchema,
  ]

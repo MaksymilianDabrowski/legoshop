@@ -2,7 +2,7 @@ import Image from "next/image";
 import {client, urlFor} from "../lib/sanity"
 
 async function getData() {
-     const query  = "*[_type == 'heroImage'][0]";
+     const query = "*[_type == 'heroImage'][0]";
 
      const data = await client.fetch(query);
      return data;
@@ -22,8 +22,8 @@ const Hero = async () => {
             </p>
         </div>
 
-        <div className="mb-12 flex w-full">
-            <Image src={urlFor(data.image).url()} alt={"Główne zdjęcie"} className="h-full w-full object-cover object-center"width={500} height={500}/>
+        <div>
+            <Image src={urlFor(data.image).url()} alt={"Główne zdjęcie"} className="h-full w-full object-cover object-center fixed" width={500} height={500} loading="lazy"/>
             {/* Przykładowe zdjęcia z sanity */}
         </div>
     </section>
