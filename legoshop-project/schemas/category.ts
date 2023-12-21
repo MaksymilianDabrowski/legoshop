@@ -5,7 +5,7 @@ export default {
     
     fields: [{
         name: 'name',
-        title: 'Name of Category',
+        title: 'Nazwa Kategorii',
         type: 'string',
     }],
 }

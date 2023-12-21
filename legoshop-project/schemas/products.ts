@@ -27,10 +27,10 @@ export default {
                 maxLength: 7,
             }
         },
-        { // Roboczo
-            name: 'descHeader',
-            type: 'string',
-            title: 'Nagłówek',
+        {
+            name: 'pieces',
+            type: 'number',
+            title: 'Ilość elementów',
         },
         {
             name: 'description',

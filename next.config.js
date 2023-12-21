@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = { 
     images: {
-        domains: ["cdn.sanity.io"], // src prop dla zdjęć na stronie // domains a remotePatterns?
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "cdn.sanity.io", // src prop dla zdjęć na stronie // domains a remotePatterns?
+            },
+        ],
     },
 };
 

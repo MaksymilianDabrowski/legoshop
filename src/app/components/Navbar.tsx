@@ -11,7 +11,7 @@ const links = [
   {name: 'Zestawy', href: '/Sets'},
   {name: 'Figurki', href: '/Minifigures'},
   {name: 'Części', href: '/Parts'},
-  {name: 'Instrukcje', href: '/Instuctions'}, // dodać 4 kategorie
+  {name: 'Instrukcje', href: '/Instuctions'}, 
 
 ]
 

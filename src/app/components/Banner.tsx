@@ -27,7 +27,7 @@ const Banner = () => {
   const Prev = (props: any) => {
     const {onClick} = props;
     return (
-      <div className="p-3 bg-slate-100 hover:text-red-500 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-30 fixed right-2 top-1/2"
+      <div className="p-3 bg-slate-100 hover:text-red-500 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-30 absolute right-2 top-1/2" // ustawić to tak jak powinno być przy fixed
       onClick={onClick}>
         <ChevronsRight/>
       </div>
@@ -47,24 +47,24 @@ const Banner = () => {
     <div className="relative">
        <Slider {...settings}>
           <div className="w-full h-full relative"> 
-            <Image src={lego6} alt="Banner One" className="w-[1900px] h-[855px] rounded-lg"/> {/* height - md:h-[855px] */}
+            <Image src={lego6} alt="Banner One" className="w-[1900px] h-[865px] rounded-lg"/> {/* height - md:h-[855px] */}
             <BannerTxt title="Niesamowite zestawy klocków!"/> {/*Teksty banerów będą musiały zostać napisane w Sanity */}
           </div>
           <div className="w-full h-full relative">
-            <Image src={lego2} alt="Banner Two" className="w-[1900px] h-[855px] rounded-lg"/> 
+            <Image src={lego2} alt="Banner Two" className="w-[1900px] h-[865px] rounded-lg"/> 
             <BannerTxt title="Niesamowite zestawy!"/>
           </div>
           <div>
-            <Image src={lego3} alt="Banner Three" className="w-[1900px] h-[855px] rounded-lg"/> 
+            <Image src={lego3} alt="Banner Three" className="w-[1900px] h-[865px] rounded-lg"/> 
           </div>
           <div>
-            <Image src={lego4} alt="Banner Four" className="w-[1900px] h-[855px] rounded-lg"/> 
+            <Image src={lego4} alt="Banner Four" className="w-[1900px] h-[865px] rounded-lg"/> 
           </div>
           <div>
-            <Image src={lego5} alt="Banner Five" className="w-[1900px] h-[855px] rounded-lg"/> 
+            <Image src={lego5} alt="Banner Five" className="w-[1900px] h-[865px] rounded-lg"/> 
           </div>
           <div>
-            <Image src={lego1} alt="Banner Six" className="w-[1900px] h-[855px] rounded-lg"/> 
+            <Image src={lego1} alt="Banner Six" className="w-[1900px] h-[865px] rounded-lg"/> 
           </div>
         </Slider>
     </div>
