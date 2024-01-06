@@ -2,15 +2,7 @@ import Link from "next/link";
 import { client } from "../lib/sanity";
 import { ArrowRightCircle } from 'lucide-react';
 import Image from "next/image";
-
-interface Props { // xd
-  _id: string,
-  imageUrl: string,
-  price: number,
-  slug: string,
-  categoryName: string,
-  name: string,
-}
+import { simpleProduct } from "../interface";
 
 async function getData() {
   const query = `*[ _type == 'product'][0...4] | order(_createdAt desc) {
@@ -26,7 +18,7 @@ async function getData() {
 }
 
 const Products = async () => {
-  const data: Props[] = await getData(); // interface
+  const data: simpleProduct = await getData(); // interface
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-auto py-16">
@@ -39,7 +31,7 @@ const Products = async () => {
         </div>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {data.map((products) => (
+          {data.map((products: any) => (
             <div key={products._id} className="group relative">
                <div className="aspect-auto w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80"> {/* Obróbka zdjęć */}
               <Image src={products.imageUrl} alt="Product Image" className="w-full h-full object-cover object-center" width={300} height={300}/>
