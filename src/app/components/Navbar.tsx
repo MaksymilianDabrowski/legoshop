@@ -12,7 +12,6 @@ const links = [
   {name: 'Figurki', href: '/Minifigures'},
   {name: 'Części', href: '/Parts'},
   {name: 'Instrukcje', href: '/Instuctions'}, 
-
 ]
 
 const Navbar = () => {

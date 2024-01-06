@@ -34,12 +34,12 @@ const Banner = () => {
     )
   }
   var settings = {
-    dots: false,
+    dots: true, // sformatować kulki
     infinite: true,
-    autoplay: false, // true
+    autoplay: true, // true
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     nextArrow: <Next />,
     prevArrow: <Prev />,
   };
