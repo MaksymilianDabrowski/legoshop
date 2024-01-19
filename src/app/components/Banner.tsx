@@ -34,11 +34,12 @@ const Banner = () => {
     )
   }
   var settings = {
-    dots: true, // sformatować kulki
+    dots: false, // sformatować kulki
     infinite: true,
-    autoplay: true, // true
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     arrows: false,
     nextArrow: <Next />,
     prevArrow: <Prev />,
@@ -47,24 +48,24 @@ const Banner = () => {
     <div className="relative">
        <Slider {...settings}>
           <div className="w-full h-full relative"> 
-            <Image src={lego6} alt="Banner One" className="w-[1900px] h-[865px] rounded-lg"/> {/* height - md:h-[855px] */}
+            <Image src={lego6} alt="Banner One" className="w-full h-[862px] rounded-lg"/> {/* height - md:h-[855px] */}
             <BannerTxt title="Niesamowite zestawy klocków!"/> {/*Teksty banerów będą musiały zostać napisane w Sanity */}
           </div>
           <div className="w-full h-full relative">
-            <Image src={lego2} alt="Banner Two" className="w-[1900px] h-[865px] rounded-lg"/> 
+            <Image src={lego2} alt="Banner Two" className="w-full h-[862px] rounded-lg"/> 
             <BannerTxt title="Niesamowite zestawy!"/>
           </div>
           <div>
-            <Image src={lego3} alt="Banner Three" className="w-[1900px] h-[865px] rounded-lg"/> 
+            <Image src={lego3} alt="Banner Three" className="w-full h-[862px] rounded-lg"/> 
           </div>
           <div>
-            <Image src={lego4} alt="Banner Four" className="w-[1900px] h-[865px] rounded-lg"/> 
+            <Image src={lego4} alt="Banner Four" className="w-full h-[862px] rounded-lg"/> 
           </div>
           <div>
-            <Image src={lego5} alt="Banner Five" className="w-[1900px] h-[865px] rounded-lg"/> 
+            <Image src={lego5} alt="Banner Five" className="w-full h-[862px] rounded-lg"/> 
           </div>
           <div>
-            <Image src={lego1} alt="Banner Six" className="w-[1900px] h-[865px] rounded-lg"/> 
+            <Image src={lego1} alt="Banner Six" className="w-full h-[862px] rounded-lg"/> 
           </div>
         </Slider>
     </div>

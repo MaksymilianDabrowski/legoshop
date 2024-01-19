@@ -48,8 +48,6 @@ const Navbar = () => {
 
       </div>
 
-
-      
     </header>
 
 )};
