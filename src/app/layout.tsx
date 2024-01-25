@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import "slick-carousel/slick/slick.css"
+import CartProvider from './components/Providers'
+import ShoppingCart from './components/ShoppingCart'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +21,12 @@ export default function RootLayout({
   return ( // Odnośniki do komponentów renderowane przed {children}
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-
-        {children}
-        </body>
+        <CartProvider>
+          <Navbar />
+          <ShoppingCart />
+          {children}
+        </CartProvider>
+      </body>
     </html>
   )
 }

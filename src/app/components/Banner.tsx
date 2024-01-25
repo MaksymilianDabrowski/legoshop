@@ -55,17 +55,20 @@ const Banner = () => {
             <Image src={lego2} alt="Banner Two" className="w-full h-[862px] rounded-lg"/> 
             <BannerTxt title="Niesamowite zestawy!"/>
           </div>
-          <div>
+          <div className="w-full h-full relative">
             <Image src={lego3} alt="Banner Three" className="w-full h-[862px] rounded-lg"/> 
           </div>
-          <div>
+          <div className="w-full h-full relative">
             <Image src={lego4} alt="Banner Four" className="w-full h-[862px] rounded-lg"/> 
+            <BannerTxt title="Kultowe zestawy LEGO!"/>
           </div>
-          <div>
+          <div className="w-full h-full relative">
             <Image src={lego5} alt="Banner Five" className="w-full h-[862px] rounded-lg"/> 
+            <BannerTxt title="Klocki na sztuki!"/>
           </div>
-          <div>
+          <div className="w-full h-full relative">
             <Image src={lego1} alt="Banner Six" className="w-full h-[862px] rounded-lg"/> 
+            <BannerTxt title="Kolekcja najnowszych figurek - tylko u nas!"/>
           </div>
         </Slider>
     </div>

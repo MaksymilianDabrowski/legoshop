@@ -5,16 +5,15 @@ import Link from 'next/link';
 
 
 async function getData(category: string) {
-    const query = `*[_type == "product" && category->name == "${category}"] {
-        _id,
-          "imageUrl": images[0].asset->url,
-          price,
-          name,
-          "slug": slug.current,
-          "categoryName": category->name
-      }`;
+  const query = `*[_type == "product" && category->name == "${category}"] {
+    _id,
+      "imageUrl": images[0].asset->url,
+      price,
+      name,
+      "slug": slug.current,
+      "categoryName": category->name
+  }`;
     const data = await client.fetch(query);
-
     return data;
 }
 
@@ -26,7 +25,7 @@ export default async function CategoryPage({params}: {params: {category: string}
       <div className="mx-auto max-w-auto py-16">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            {params.category}
+            Our best {params.category}
           </h2>
         </div>
 
@@ -43,9 +42,6 @@ export default async function CategoryPage({params}: {params: {category: string}
                       {products.name}
                     </Link>
                   </h3>
-                  <p className="text-sm text-gray-500 font-semibold">
-                    {products.categoryName}
-                  </p>
                 </div>
                 <p className="text-sm text-gray-900 font-semibold">
                   {products.price} zł.

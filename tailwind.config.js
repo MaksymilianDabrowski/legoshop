@@ -50,6 +50,10 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        addToCart: {
+          DEFAULT: "bg-red",
+          foreground: "bg-red-500",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

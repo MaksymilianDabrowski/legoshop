@@ -42,9 +42,6 @@ const Products = async () => {
                       {products.name}
                     </Link>
                   </h3>
-                  <p className="text-sm text-gray-500 font-semibold">
-                    {products.categoryName}
-                  </p>
                 </div>
                 <p className="text-sm text-gray-900 font-semibold">
                   {products.price} zł.

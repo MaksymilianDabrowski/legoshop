@@ -3,6 +3,7 @@ import ProductGallery from "@/app/components/ProductGallery";
 import { fullProduct } from "@/app/interface";
 import { PackageCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import AddToCart from "@/app/components/AddToCart";
 
 
 
@@ -15,6 +16,7 @@ async function getData(slug: string) {
           description,
           "slug": slug.current,
           "categoryName": category->name,
+          price_id,
       }`
 
     const data = await client.fetch(query);
@@ -46,9 +48,18 @@ export default async function ProductPage({ params }: { params: { slug: string }
                     <span className="text-gray-800 font-semibold text-sm"> Dostawa od 3 do 5 dni roboczych</span>
                     </div>
                      <br /> {/* xd */}
-                    <div className="flex gap-3">
-                        <Button className="?">Dodaj do koszyka</Button>
-                        <Button>Kup teraz</Button>
+                    <div className="flex gap-3" >
+                        {/* <Button className="?">Dodaj do koszyka</Button> */}
+                        <AddToCart 
+                        currency="PLN" 
+                        description={data.description} 
+                        image={data.images[0]} 
+                        name={data.name} 
+                        price={data.price} 
+                        key={data._id}
+                        price_id={data.price_id}
+                        />
+                        <Button variant={"secondary"}>Kup teraz</Button>
                     </div>
                     <p className="mt-7 text-base tracking-wide">{data.description}</p>
                 </div>

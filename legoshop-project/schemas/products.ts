@@ -52,6 +52,11 @@ export default {
             type: 'number',
         },
         {
+            name: 'price_id',
+            title: 'Stripe ID',
+            type: 'string',
+        },
+        {
             name: 'category',
             title: 'Kategoria',
             type: 'reference',
