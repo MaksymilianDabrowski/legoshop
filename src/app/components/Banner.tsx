@@ -16,61 +16,61 @@ import BannerTxt from "./BannerTxt";
 
 const Banner = () => {
   const Next = (props: any) => {
-    const {onClick} = props;
+    const { onClick } = props;
     return (
-      <div className="p-3 bg-slate-100 hover:text-red-500 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-30 fixed left-2 top-1/2"
-      onClick={onClick}>
-        <ChevronsLeft/>
+      <div className="p-3 bg-slate-100 hover:text-red-500 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-30 absolute left-2 top-1/2"
+        onClick={onClick}>
+        <ChevronsLeft />
       </div>
     )
   }
   const Prev = (props: any) => {
-    const {onClick} = props;
+    const { onClick } = props;
     return (
       <div className="p-3 bg-slate-100 hover:text-red-500 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-30 absolute right-2 top-1/2" // ustawić to tak jak powinno być przy fixed
-      onClick={onClick}>
-        <ChevronsRight/>
+        onClick={onClick}>
+        <ChevronsRight />
       </div>
     )
   }
   var settings = {
-    dots: false, // sformatować kulki
+    dots: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: false,
-    nextArrow: <Next />,
-    prevArrow: <Prev />,
+    arrows: true,
+    nextArrow: <Prev />,
+    prevArrow: <Next />,
   };
-  return ( // następnie: dodać animacje do zdjęć - motion, może shadcn, !naprawić slider który przesuwa zdjęcia w drugą stronę!
+  return (
     <div className="relative">
-       <Slider {...settings}>
-          <div className="w-full h-full relative"> 
-            <Image src={lego6} alt="Banner One" className="w-full h-[862px] rounded-lg"/> {/* height - md:h-[855px] */}
-            <BannerTxt title="Niesamowite zestawy klocków!"/> {/*Teksty banerów będą musiały zostać napisane w Sanity */}
-          </div>
-          <div className="w-full h-full relative">
-            <Image src={lego2} alt="Banner Two" className="w-full h-[862px] rounded-lg"/> 
-            <BannerTxt title="Niesamowite zestawy!"/>
-          </div>
-          <div className="w-full h-full relative">
-            <Image src={lego3} alt="Banner Three" className="w-full h-[862px] rounded-lg"/> 
-          </div>
-          <div className="w-full h-full relative">
-            <Image src={lego4} alt="Banner Four" className="w-full h-[862px] rounded-lg"/> 
-            <BannerTxt title="Kultowe zestawy LEGO!"/>
-          </div>
-          <div className="w-full h-full relative">
-            <Image src={lego5} alt="Banner Five" className="w-full h-[862px] rounded-lg"/> 
-            <BannerTxt title="Klocki na sztuki!"/>
-          </div>
-          <div className="w-full h-full relative">
-            <Image src={lego1} alt="Banner Six" className="w-full h-[862px] rounded-lg"/> 
-            <BannerTxt title="Kolekcja najnowszych figurek - tylko u nas!"/>
-          </div>
-        </Slider>
+      <Slider {...settings}>
+        <div className="w-auto h-auto relative text-center">
+          <Image src={lego6} alt="Banner One" className="w-full h-[862px] rounded-lg" /> {/* height - md:h-[855px] */}
+          <BannerTxt title="Niesamowite zestawy klocków" /> {/*Teksty banerów będą musiały zostać napisane w Sanity */}
+        </div>
+        <div className="w-full h-full relative text-center">
+          <Image src={lego2} alt="Banner Two" className="w-full h-[862px] rounded-lg" />
+          <BannerTxt title="Niesamowite zestawy!" />
+        </div>
+        <div className="w-full h-full relative text-center">
+          <Image src={lego3} alt="Banner Three" className="w-full h-[862px] rounded-lg" />
+        </div>
+        <div className="w-full h-full relative text-center">
+          <Image src={lego4} alt="Banner Four" className="w-full h-[862px] rounded-lg" />
+          <BannerTxt title="Kultowe zestawy LEGO!" />
+        </div>
+        <div className="w-full h-full relative text-center">
+          <Image src={lego5} alt="Banner Five" className="w-full h-[862px] rounded-lg" />
+          <BannerTxt title="Klocki na sztuki!" />
+        </div>
+        <div className="w-full h-full relative text-center">
+          <Image src={lego1} alt="Banner Six" className="w-full h-[862px] rounded-lg" />
+          <BannerTxt title="Kolekcja najnowszych figurek - tylko u nas!" />
+        </div>
+      </Slider>
     </div>
   )
 }
